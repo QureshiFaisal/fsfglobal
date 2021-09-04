@@ -1,12 +1,12 @@
  
 import 'package:flutter/material.dart';
-class QuantityDropdown extends StatefulWidget {
+class TypeDropdown extends StatefulWidget {
  
   @override
-  _QuantityDropdown createState() => _QuantityDropdown();
+  _TypeDropdown createState() => _TypeDropdown();
 }
- class _QuantityDropdown extends State<QuantityDropdown> {
- String quantityvalue = '';
+ class _TypeDropdown extends State<TypeDropdown> {
+ String typevalue = '';
 
   @override
   Widget build(BuildContext context) {
@@ -16,42 +16,42 @@ class QuantityDropdown extends StatefulWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-          Padding(padding: EdgeInsets.fromLTRB(20, 20, 35, 20),
-            child: Text('Quantity : ', 
+          Padding(padding: EdgeInsets.fromLTRB(20, 20, 90, 20),
+            child: Text('Type : ', 
         style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
         textAlign: TextAlign.center ),),
 
      Padding(
-       padding: EdgeInsets.all(5.0),
+       padding: EdgeInsets.all(5),
        child: DropdownButton<String>(items: [
          DropdownMenuItem<String>(
-           value: 'Quantity 1',
+           value: 'Type 1',
            child: Center(
-             child:Text('Quantity 1'),
+             child:Text('Type 1'),
              ),
            ),
            DropdownMenuItem<String>(
-           value: 'Quantity 2',
+           value: 'Type 2',
            child: Center(
-             child:Text('Quantity 2'),
+             child:Text('Type 2'),
              ),
            ),
            DropdownMenuItem<String>(
-           value: 'Quantity 3',
+           value: 'Type 3',
            child: Center(
-             child:Text('Quantity 3'),
+             child:Text('Type 3'),
              ),
            )
        ],
-       onChanged: (_quantityvalue)=> {
+       onChanged: (_typevalue)=> {
      setState((){
-       quantityvalue = _quantityvalue as String;
+       typevalue = _typevalue as String;
      })
        },
-      //  hint: Text("Select Quantity"),
+      //  hint: Text("Select Type"),
        ),
        ),
-       Text('$quantityvalue' )
+       Text('$typevalue' )
         ],)
         
       ],

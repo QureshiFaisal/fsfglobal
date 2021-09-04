@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import './screens/homepage_screen.dart';
 
+
 void main(){
   runApp(MyApp());
 }
@@ -97,7 +98,25 @@ class _LoginState extends State<Login>{
                       context, MaterialPageRoute(builder: (_) => HomePageScreen()));
                 },
                 child: Text(
-                  'Login',
+                  'Login as admin',
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
+              ),
+            ),
+            Divider(),
+             Container(
+              height: 50,
+              width: 250,
+              decoration: BoxDecoration(
+                  color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+              child: FlatButton(
+                color: Colors.black,
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => HomePageScreen()));
+                },
+                child: Text(
+                  'Login as client ',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),

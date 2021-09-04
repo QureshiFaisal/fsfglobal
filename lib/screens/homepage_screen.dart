@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:fsfglobal/screens/sales_order_form_screen.dart';
 import '../widgets/main_drawer.dart';
+import '../screens/preview_screen.dart';
 class HomePageScreen extends StatelessWidget {
   static const routeName = '/homepagescreen';
   @override
@@ -20,7 +21,7 @@ class HomePageScreen extends StatelessWidget {
       initialRoute: '/',
       routes: {
       SalesOrderFormScreen.routeName: (ctx) => SalesOrderFormScreen(),  
-       
+       PreviewScreen.routeName: (ctx) => PreviewScreen(),
         
       },
    

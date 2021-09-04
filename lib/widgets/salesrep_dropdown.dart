@@ -1,12 +1,12 @@
  
 import 'package:flutter/material.dart';
-class QuantityDropdown extends StatefulWidget {
+class SalesRepDropdown extends StatefulWidget {
  
   @override
-  _QuantityDropdown createState() => _QuantityDropdown();
+  _SalesRepDropdown createState() => _SalesRepDropdown();
 }
- class _QuantityDropdown extends State<QuantityDropdown> {
- String quantityvalue = '';
+ class _SalesRepDropdown extends State<SalesRepDropdown> {
+ String salesRepvalue = '';
 
   @override
   Widget build(BuildContext context) {
@@ -16,42 +16,43 @@ class QuantityDropdown extends StatefulWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-          Padding(padding: EdgeInsets.fromLTRB(20, 20, 35, 20),
-            child: Text('Quantity : ', 
+          Padding(padding: EdgeInsets.fromLTRB(20, 20, 25, 20),
+            child: Text('Sales rep : ', 
         style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-        textAlign: TextAlign.center ),),
+        textAlign: TextAlign.center ),
+        ),
 
      Padding(
        padding: EdgeInsets.all(5.0),
        child: DropdownButton<String>(items: [
          DropdownMenuItem<String>(
-           value: 'Quantity 1',
+           value: '1',
            child: Center(
-             child:Text('Quantity 1'),
+             child:Text('Sales rep 1'),
              ),
            ),
            DropdownMenuItem<String>(
-           value: 'Quantity 2',
+           value: '2',
            child: Center(
-             child:Text('Quantity 2'),
+             child:Text('Sales rep 2'),
              ),
            ),
            DropdownMenuItem<String>(
-           value: 'Quantity 3',
+           value: '3',
            child: Center(
-             child:Text('Quantity 3'),
+             child:Text('Sales rep 3'),
              ),
            )
        ],
-       onChanged: (_quantityvalue)=> {
+       onChanged: (_sizeRepvalue)=> {
      setState((){
-       quantityvalue = _quantityvalue as String;
+       salesRepvalue = _sizeRepvalue as String;
      })
        },
-      //  hint: Text("Select Quantity"),
+      //  hint: Text("Select Sales rep"),
        ),
        ),
-       Text('$quantityvalue' )
+       Text('$salesRepvalue' )
         ],)
         
       ],

@@ -1,12 +1,12 @@
  
 import 'package:flutter/material.dart';
-class QuantityDropdown extends StatefulWidget {
+class DesignDropdown extends StatefulWidget {
  
   @override
-  _QuantityDropdown createState() => _QuantityDropdown();
+  _DesignDropdown createState() => _DesignDropdown();
 }
- class _QuantityDropdown extends State<QuantityDropdown> {
- String quantityvalue = '';
+ class _DesignDropdown extends State<DesignDropdown> {
+ String designvalue = '';
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,8 @@ class QuantityDropdown extends StatefulWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-          Padding(padding: EdgeInsets.fromLTRB(20, 20, 35, 20),
-            child: Text('Quantity : ', 
+          Padding(padding: EdgeInsets.fromLTRB(20, 20, 55, 20),
+            child: Text('Design : ', 
         style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
         textAlign: TextAlign.center ),),
 
@@ -25,33 +25,33 @@ class QuantityDropdown extends StatefulWidget {
        padding: EdgeInsets.all(5.0),
        child: DropdownButton<String>(items: [
          DropdownMenuItem<String>(
-           value: 'Quantity 1',
+           value: 'Design 1',
            child: Center(
-             child:Text('Quantity 1'),
+             child:Text('Design 1'),
              ),
            ),
            DropdownMenuItem<String>(
-           value: 'Quantity 2',
+           value: 'Design 2',
            child: Center(
-             child:Text('Quantity 2'),
+             child:Text('Design 2'),
              ),
            ),
            DropdownMenuItem<String>(
-           value: 'Quantity 3',
+           value: 'Design 3',
            child: Center(
-             child:Text('Quantity 3'),
+             child:Text('Design  3'),
              ),
            )
        ],
-       onChanged: (_quantityvalue)=> {
+       onChanged: (_designvalue)=> {
      setState((){
-       quantityvalue = _quantityvalue as String;
+       designvalue = _designvalue as String;
      })
        },
-      //  hint: Text("Select Quantity"),
+      //  hint: Text("Select Design"),
        ),
        ),
-       Text('$quantityvalue' )
+       Text('$designvalue' )
         ],)
         
       ],
